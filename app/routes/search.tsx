@@ -30,7 +30,6 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 export default function Search() {
   const images = useLoaderData();
-  console.log(images[0]);
   return (
     <div className="wrapper">
       <ImageList images={images} />
