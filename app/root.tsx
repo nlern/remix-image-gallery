@@ -4,15 +4,20 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
+  useSearchParams,
 } from "remix";
 import type { MetaFunction } from "remix";
+import Header from "./components/Header/Header";
+import SearchBox from "./components/SearchBox/SearchBox";
 
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };
 };
 
 export default function App() {
+  const [searchParams] = useSearchParams();
+  const q = searchParams.get("q") || "";
   return (
     <html lang="en">
       <head>
@@ -22,7 +27,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Header />
+        <main>
+          <SearchBox q={q} />
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}
