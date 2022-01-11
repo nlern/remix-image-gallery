@@ -17,6 +17,7 @@
 
 .image-card__container .image-card__image-container {
   height: 240px;
+  overflow: hidden;
 }
 
 .image-card__container .image-card__image {
@@ -24,6 +25,11 @@
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  transition: all 2s ease;
+}
+
+.image-card__container .image-card__image:hover {
+  transform: scale(1.5);
 }
 
 .image-card__container .image-card__content {
@@ -34,7 +40,8 @@
 }
 
 .image-card__container .image-card__content .image-card__description {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
   font-weight: 400;
 }
 
@@ -71,4 +78,6 @@
   .image-card__author
   .image-card__author-name {
   flex: 1;
+  font-size: 600;
+  font-size: 1.1rem;
 }

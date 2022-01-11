@@ -1,0 +1,88 @@
+/*
+    Josh's Custom CSS Reset
+    https://www.joshwcomeau.com/css/global-styles/
+  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  line-height: 1.5;
+  line-height: calc(1em + 0.625rem);
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #2c2c51;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+main {
+  padding-bottom: 5rem;
+}
+
+.header {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.searchbox-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.searchbox-container .searchbox {
+  width: 25rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 5px;
+}

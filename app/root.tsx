@@ -7,12 +7,31 @@ import {
   ScrollRestoration,
   useSearchParams,
 } from "remix";
-import type { MetaFunction } from "remix";
+import type { LinksFunction, MetaFunction } from "remix";
+
+import stylesUrl from "~/styles/global.css";
+
 import Header from "./components/Header/Header";
 import SearchBox from "./components/SearchBox/SearchBox";
 
+export const links: LinksFunction = () => {
+  return [
+    { href: "https://fonts.googleapis.com", rel: "preconnect" },
+    {
+      href: "https://fonts.gstatic.com",
+      rel: "preconnect",
+      crossOrigin: "anonymous",
+    },
+    {
+      href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap",
+      rel: "stylesheet",
+    },
+    { href: stylesUrl, rel: "stylesheet" },
+  ];
+};
+
 export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
+  return { title: "Image Gallery" };
 };
 
 export default function App() {
