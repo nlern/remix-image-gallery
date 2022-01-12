@@ -1,4 +1,4 @@
-import { useLoaderData } from "remix";
+import { redirect, useLoaderData } from "remix";
 import type { LinksFunction, LoaderFunction } from "remix";
 import ImageList from "~/components/ImageList/ImageList";
 import stylesUrl from "~/styles/search.css";
@@ -10,6 +10,10 @@ export const links: LinksFunction = () => {
 export const loader: LoaderFunction = async ({ request }) => {
   const url = new URL(request.url);
   const q = url.searchParams.get("q");
+
+  if (typeof q !== "string" || !q) {
+    return redirect("/");
+  }
 
   const unsplashApiUrl = new URL("https://api.unsplash.com/search/photos");
   const params = {
@@ -31,7 +35,7 @@ export const loader: LoaderFunction = async ({ request }) => {
 export default function Search() {
   const images = useLoaderData();
   return (
-    <div className="wrapper">
+    <div className="search-page__wrapper">
       <ImageList images={images} />
     </div>
   );

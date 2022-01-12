@@ -1,0 +1,43 @@
+.homepage__container {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  margin: 4rem auto;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.homepage__container .homepage__intro {
+  text-align: justify;
+}
+
+.homepage__container .homepage__tags-container .homepage__tags-help {
+  text-align: center;
+}
+.homepage__container .homepage__tags-container .homepage__tags {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.homepage__container .homepage__tags-container .homepage__tags .tag-link a {
+  text-decoration: none;
+  padding: 0.5rem;
+  min-width: 8rem;
+  border: 1px solid rgb(77, 76, 76);
+  border-radius: 10px;
+  color: rgb(77, 76, 76);
+  transition: color 250ms ease, background-color 250ms ease;
+}
+
+.homepage__container
+  .homepage__tags-container
+  .homepage__tags
+  .tag-link
+  a:hover {
+  color: #eee;
+  background-color: rgb(77, 76, 76);
+}

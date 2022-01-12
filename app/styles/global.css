@@ -74,15 +74,58 @@ main {
   justify-content: space-around;
 }
 
-.searchbox-container {
+.footer {
+  min-height: 10rem;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header a {
+  font-family: "The Nautigal", cursive;
+  font-size: 6rem;
+  text-decoration: none;
+  color: #2c2c51;
+  letter-spacing: 0.25rem;
+}
+
+.searchbox__container {
   display: flex;
   justify-content: center;
   padding: 2rem;
 }
 
-.searchbox-container .searchbox {
+.searchbox__input-wrapper {
+  position: relative;
+}
+
+.searchbox__container .searchbox__searchbox {
   width: 25rem;
   padding: 0.5rem;
   border: 1px solid rgb(218, 218, 218);
   border-radius: 5px;
+}
+
+.searchbox__container .searchbox__search-button-wrapper {
+  position: absolute;
+  z-index: 2;
+  right: 0.5rem;
+  top: 0.5rem;
+  font-size: 24px;
+}
+
+.searchbox__container .searchbox__search-button {
+  display: inline-block;
+  color: #a0a0a0;
+  border: none;
+  background-color: transparent;
+  transition: color 1s ease;
+}
+
+.searchbox__container .searchbox__search-button:hover {
+  color: #2c2c51;
+  cursor: pointer;
 }
