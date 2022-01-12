@@ -4,3 +4,9 @@ node_modules
 /build
 /public/build
 .env
+
+# Local Netlify folder
+.netlify
+
+# netlify functions
+/netlify/functions/server/build
